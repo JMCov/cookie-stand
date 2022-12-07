@@ -1,0 +1,13 @@
+
+
+table, td{
+  margin: 1.5em;
+  padding: 10px;
+  border: 1px solid;
+}
+th{
+  margin: 1.5em;
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid;
+}
