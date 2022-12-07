@@ -66,7 +66,6 @@ function tableFooter() {
 
 function totalPerHour(randomNumber, i) {
   totalPerHourArr[i] += randomNumber;
-
 }
 // ******Object Literals******
 
