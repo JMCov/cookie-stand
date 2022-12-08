@@ -3,9 +3,11 @@ header{
   display: flex;
   background-color: #755C54;
 }
+
 h1, h2{
   font-family: 'Kdam Thmor Pro', sans-serif;
   margin: 30px;
+  color:whitesmoke
 
 }
 header img{
@@ -42,12 +44,39 @@ figcaption {
 
 #contest{
   background-color: #C26C51;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #F7C2B1;
 }
+
+#contest img{
+  margin: 30px;
+  
+}
+
+#contest article li{
+  margin: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #F7C2B1;
+}
+
+#locations{
+  display: flex;
+  margin: 30px;
+  
+}
+
+#locations li{
+  margin: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #755C54;
+}
+
 
 table, td{
   margin: 1.5em;
   padding: 10px;
   border: 1px solid;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 th{
@@ -55,4 +84,12 @@ th{
   padding: 10px;
   font-weight: bold;
   border: 1px solid;
+}
+
+footer{
+  background-color: #755C54;
+  max-height: 130px;
+  display: flex;
+  
+  
 }
