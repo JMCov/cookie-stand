@@ -110,11 +110,9 @@ City.prototype.render = function () {
   }
 };
 
-function handleSubmit(event){
+function handleSubmit(event) {
   event.preventDefault();
-  
-  console.log('Form Submitted');
-  
+
   let cityName = event.target.cityName.value;
   let minCustomer = event.target.minCustomer.value;
   let maxCustomer = event.target.maxCustomer.value;
@@ -128,8 +126,6 @@ function handleSubmit(event){
   document.getElementById('tableFooter').remove();
   tableFooter();
 }
-
-
 
 // ******Executable Code******
 
