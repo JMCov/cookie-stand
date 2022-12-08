@@ -16,6 +16,8 @@ cityArr.push(seattle, tokyo, dubai, paris, lima);
 
 let salesTable = document.getElementById('sales');
 
+let cookieForm = document.getElementById('cookie-form');
+
 // *****Helper Functions/Utilities******
 
 function randomCustomer(min, max) {
@@ -49,6 +51,7 @@ function tableHeader() {
 function tableFooter() {
   let footer = document.createElement('tr');
   footer.innerText = 'Totals Per Hour';
+  footer.id = 'tableFooter';
   salesTable.appendChild(footer);
   for (let i = 0; i < totalPerHourArr.length; i++) {
     let thElem = document.createElement('th');
@@ -107,10 +110,31 @@ City.prototype.render = function () {
   }
 };
 
+function handleSubmit(event){
+  event.preventDefault();
+  
+  console.log('Form Submitted');
+  
+  let cityName = event.target.cityName.value;
+  let minCustomer = event.target.minCustomer.value;
+  let maxCustomer = event.target.maxCustomer.value;
+  let averageCookie = event.target.averageCookie.value;
+
+  let newCity = new City(cityName, minCustomer, maxCustomer, averageCookie);
+
+  cityArr.push(newCity);
+  newCity.getCookiesSold();
+  newCity.render();
+  document.getElementById('tableFooter').remove();
+  tableFooter();
+}
+
+
+
 // ******Executable Code******
 
 tableHeader();
 totalPerHourArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 renderAll();
 tableFooter();
-console.log(totalPerHourArr);
+cookieForm.addEventListener('submit', handleSubmit);
